@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         plateau();
+        entreeUtilisateur();
     }
 
     public static void plateau(){
@@ -18,5 +22,28 @@ public class main {
         }
 
         System.out.println(" 1   2   3   4   5   6   7   8");
+    }
+
+    public static void entreeUtilisateur(){
+        if (tourJoueur() == 1) {
+            System.out.println("Joueur 1, où voulez-vous jouer ?");
+            caseAJouer();
+        } else {
+            System.out.println("Joueur 2, où voulez-vous jouer ?");
+            caseAJouer();
+        }
+
+
+    }
+
+    public static int tourJoueur(){
+        int nbJoueur = 1;
+        return nbJoueur;
+    }
+
+    public static int caseAJouer(){
+        Scanner input = new Scanner(System.in);
+        int numeroCase = input.nextInt();
+        return numeroCase;
     }
 }
